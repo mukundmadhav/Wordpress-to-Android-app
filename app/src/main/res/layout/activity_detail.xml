@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mukundmadhav.crayonpaper.DetailActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_detail"
+        android:background="@color/sexyone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </Toolbar>
+
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"
+        android:layout_below="@id/toolbar_detail">
+    </WebView>
+
+    <!-- <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        />
+
+        -->
+
+
+
+
+
+</RelativeLayout>

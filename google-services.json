@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "926157313872",
+    "firebase_url": "https://my-nav-bar.firebaseio.com",
+    "project_id": "my-nav-bar",
+    "storage_bucket": "my-nav-bar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926157313872:android:2eaa14f2f11a21fd",
+        "android_client_info": {
+          "package_name": "com.mukundmadhav.navbartry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926157313872-vh10cvvupqb15vou7s60tvd07en6l5a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS7dp43BZmohtNc0LJvyjxcOD3s3gyvb4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926157313872:android:8b4207f149123d88",
+        "android_client_info": {
+          "package_name": "com.mukundmadhav.crayonpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926157313872-vh10cvvupqb15vou7s60tvd07en6l5a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS7dp43BZmohtNc0LJvyjxcOD3s3gyvb4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
