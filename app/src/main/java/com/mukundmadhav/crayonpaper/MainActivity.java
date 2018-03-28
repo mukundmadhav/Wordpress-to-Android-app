@@ -1,5 +1,6 @@
 package com.mukundmadhav.crayonpaper;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.NavigationView;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rview;
     public static String tContent;
     private FirebaseAnalytics firebaseAnalytics;
+    static String[] temp=new String[5];
+
 
     public static final String url ="https://crayonpaper.com/wp-json/wp/v2/posts?fields=id,title,content,link";
 
@@ -130,10 +133,12 @@ public class MainActivity extends AppCompatActivity {
                 dataMembers.postId = jsonObject.getInt("id");
                 dataMembers.imgurl = getFetaureImageUrl(jsonObject2.getString("rendered"));
                 dataMembers.postCode = jsonObject2.getString("rendered");
+                Log.i("Rednnn",dataMembers.postCode);
+                temp[i]=dataMembers.postCode;
                 Log.i("Imported: ", jsonObject.getString("link"));
                 dataMembers.posturl=jsonObject.getString("link");
 
-                MainActivity.tContent = dataMembers.postCode;
+
 
                 data.add(dataMembers);
             }

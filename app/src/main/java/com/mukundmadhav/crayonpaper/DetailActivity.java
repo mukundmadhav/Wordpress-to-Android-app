@@ -8,33 +8,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toolbar;
 
 public class DetailActivity extends AppCompatActivity {
 
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_detail);
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        setActionBar(toolbar);
-        String reev = MainActivity.tContent;
-        Log.i("Receiv:",reev);
-        //detailAct(reev);
+        webView  = findViewById(R.id.webview);
+        String reev = MainActivity.temp[0];
+        String htmlData = "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />" + reev;
+        webView.getSettings().setJavaScriptEnabled(true);
+        WebSettings settings = webView.getSettings();
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
+        webView.loadDataWithBaseURL("file:///android_asset/", htmlData,"text/html", "UTF-8", null);
     }
 
-    public void detailAct(String urlTOOprn){
-        Uri uri = Uri.parse(urlTOOprn);
-        CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
-        intentBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
-        intentBuilder.setSecondaryToolbarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-        intentBuilder.setExitAnimations(this, android.R.anim.slide_in_left,
-                android.R.anim.slide_out_right);
-        CustomTabsIntent customTabsIntent = intentBuilder.build();
-
-        customTabsIntent.launchUrl(this, uri);
-    }
 }
