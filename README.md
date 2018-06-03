@@ -1,4 +1,4 @@
-# Crayonpaper
+# Wp -> Android App
 This is a Wordpress to App convertor app. The app uses REST API and implenets then into Recycler View. 
 
 # About
